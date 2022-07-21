@@ -38,9 +38,6 @@ function playRound(playerSelection, computerSelection){
     else if(playerRPS.toLowerCase() === compRPS.toLowerCase()){
         console.log(`${z} You both chose ${playerRPS}.`);
     } 
-//     else{
-//         console.log( `Could not determine the winner. Player chose ${playerRPS} and Computer chose ${compRPS}.`);
-//     } 
 
 }
 function game(){
