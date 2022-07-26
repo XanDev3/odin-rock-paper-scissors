@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Mochiy+Pop+One&family=Roboto:ital,wght@1,100&display=swap');
 html {
     background: #e7cb7d59;
 }
@@ -10,25 +11,62 @@ html {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 4px;
 }
 
 h1 {
     color: rgb(3, 117, 8);
-    font-family:   'Mochiy Pop One','Franklin Gothic Medium', 'Arial Narrow';
+    font-family:   'Cinzel', serif;
     font-size: 75px;
-    margin: 20px;
-
+    margin:-8px;
 }
+
+h2 {
+    color: rgb(42, 9, 133);
+    font-family:   'Cinzel', serif;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  
+}
+
 
 h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     font-size: 40px;
     color: #0db907;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
+/* new rock paper scissor images  */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    text-align: center;
+  }
+  
+  .card-image {
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+  }
+  
+  .card-image:hover {
+    top: -5px;
+  }
+  
+  .card-text {
+    font-family: 'Mochiy Pop One','Franklin Gothic Medium';
+    text-transform: capitalize;
+    font-size: 25px;
+    color: blue;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
 
 #roundResults {
     display: flex;
@@ -40,6 +78,7 @@ h3 {
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
+    white-space: pre; /* Had to add this in order for \r\n to work in the js for the Results to display a line break */
     }
     
     .scores {
@@ -63,7 +102,7 @@ h3 {
     
     /* buttons */
     
-    .optionBtn button {
+    /* .optionBtn button {
         background-color: #70e2b3;
         border: 4px solid #0b5f1d;
         border-radius: 12px;
@@ -73,7 +112,7 @@ h3 {
         font-weight: bold;
         color: rgb(23, 23, 27);
         margin-bottom: 30px;
-        }
+        } */
     
     
     #reset {
@@ -102,7 +141,7 @@ h3 {
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #035664;
-    padding-left: 15px;
+    padding-left: 14px;
 }
 
 #compLabel{
@@ -111,6 +150,6 @@ h3 {
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #035664;
-    padding-left: 18px;
+    padding-left: 24px;
     padding-right: 3px;
 }

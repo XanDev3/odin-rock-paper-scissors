@@ -1,4 +1,6 @@
-const optionBtn = document.querySelectorAll('div.optionBtn button');
+// const optionBtn = document.querySelectorAll('div.optionBtn button');
+// const images = Array.from(document.querySelectorAll('.card-image'));
+const images = document.querySelectorAll('div.card-image img');
 const playerPoints= document.querySelector('#playerScore');
 const computerPoints = document.querySelector('#computerScore');
 const roundResults = document.querySelector('#roundResults');
@@ -14,7 +16,10 @@ let playerChoice;
 resetBtn.addEventListener('click',() => location.reload());
 
 //add listener for clicks on each button
-optionBtn.forEach(button => {button.addEventListener('click', getPlayerSelection)});
+// Start Game when user clicks on an image
+images.forEach(img => {img.addEventListener('click', getPlayerSelection)});
+// images.forEach((image) =>image.addEventListener('click', () => {getPlayerSelection(image.dataset.image);}));
+// optionBtn.forEach(button => {button.addEventListener('click', getPlayerSelection)});
 
 function computerPlay(){
     const items = ["Rock", "Paper", "Scissors"];
@@ -23,8 +28,8 @@ function computerPlay(){
 }
 
 function getPlayerSelection(e){
-    // let playerSelection = (e.target.id);
-    playerSelection = e.target.textContent;
+    let playerSelection = e.target.alt;
+    // playerSelection = e.target.classList;
     playRound(playerSelection, computerPlay());
 }
 
@@ -74,32 +79,15 @@ function checkGameOver(){
     }
 }
 const winnerResults ={
-    computer: ["You Lost the game to a computer!", 'red'],
-    player: ["You Win the game!!!!", 'green'],
-    tie: ["The game is a Tie!", 'blue']
+    computer: ['You Lost the game to a computer! \r\nWant to play again?', 'red'],
+    player: ['You Win the game!!!! \r\nWant to play again?', 'green'],
+    tie: ['The game is a Tie!\r\nWant to play again?', 'blue']
   };
 
 function updateResults(winner){
     roundResults.textContent = winnerResults[winner][0];
     roundResults.style.color = winnerResults[winner][1];
-    optionBtn.forEach(button => { button.removeEventListener('click', getPlayerSelection);
-});
+    // optionBtn.forEach(button => { button.removeEventListener('click', getPlayerSelection);
+    images.forEach(img => {img.removeEventListener('click', getPlayerSelection)});
+
 }
-/* function game(){         //plays five games
-    for (let i = 0; i < 5; i++) {
-        getPlayerSelection();
-        const computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
-    }
-    if(playerScore > computerScore){
-        roundResults.textContent =`You win the whole game with score: ${playerScore} to ${computerScore} `;
-    }
-    else if(playerScore < computerScore){
-        roundResults.textContent =`You lost the whole game with score: ${computerScore} to ${playerScore} `;
-    }
-    else if(playerScore === computerScore){
-        roundResults.textContent =`It's a Draw!`;
-    }
-    optionBtn.forEach(button => {button.removeEventListener('click', getPlayerSelection)})
-}
-game() */
