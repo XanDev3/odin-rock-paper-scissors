@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="flex">
+    <h1>Lets Play:</h1>
+    <h2>Rock, Paper, Scissors</h2>
+    <h3>First To 5 Wins!</h3>
 
+   
+  <div class="d-flex">
+    <div class="card">
+      <div class="card-image" id="rock">
+          <img src="images/rock.png" alt="Rock" class="image" />
+      </div>
+      <div class="card-text">Rock</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" id="paper">
+        <img src="images/paper.png" alt="Paper" class="image" />
+      </div>
+      <div class="card-text">Paper</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image" id="scissors">
+        <img src="images/scissors.png" alt="Scissors" class="image" />
+      </div>
+      <div class="card-text">Scissors</div>
+    </div>
+  </div>
+<!--     <div class="optionBtn">
+      <button id="0">Rock</button>
+      <button id="1">Paper</button>
+      <button id="2">Scissors</button>
+    </div> -->
+
+    <div class="labels">
+      <span id="playerLabel">Player scores</span>
+      <span id="compLabel">Computer scores</span>
+    </div>
+    
+
+    <div class="scores">
+      <div id="playerScore"></div>
+      <div id="computerScore"></div>
+    </div>
+
+  <div><span id="resultsLabel">Results</label></div>
+    
+
+    <div id="roundResults"></div>
+
+  <div>
+    <button id="reset">Play Again!</button>
+  </div>
+   
+  </div>
+<script src="scripts.js"></script>
+</body>
+</html>    
