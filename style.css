@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Mochiy+Pop+One&family=Roboto:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Mochiy+Pop+One&family=Permanent+Marker&family=Roboto:ital,wght@1,100&display=swap');
 html {
-    background: #e7cb7d59;
+    background: #fca60593;
 }
 
 .flex {
@@ -133,14 +133,14 @@ h3 {
     text-align: center;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #035664;
+    color: black;
 }
 
 #playerLabel{
     font-size: 20px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #035664;
+    color: black;
     padding-left: 14px;
 }
 
@@ -149,7 +149,7 @@ h3 {
     text-align: center;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #035664;
+    color: black;
     padding-left: 24px;
     padding-right: 3px;
 }
